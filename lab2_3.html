@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Використання оператора SWITCH</title>
+	</head>	
+	<body>
+		<script> 
+			"use strict";
+			let marks = parseInt(prompt("Введіть вашу оцінку")); 
+			let b = marks % 10;
+            let grade;
+
+            switch (true) {
+                case marks < 50:
+                    grade = "не здача!";
+                    break;
+                case marks < 60:
+                    grade = "D оцінка";
+                    break;
+                case marks < 70:
+                    grade = "C оцінка";
+                    break;
+                case marks < 80:
+                    grade = "B оцінка";
+                    break;
+                case marks < 90:
+                    grade = "A оцінка";
+                    break;
+                case marks < 100:
+                    grade = "A+ оцінка";
+                    break;
+                default:
+                    grade = "Помилка!";
+            }
+
+			document.write("Ваша оцінка: ", marks," "+ grade);
+		</script>
+	</body>
+</html>

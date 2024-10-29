@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Знаходження найбільшого числа</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			let x = 55;
+			let y = 72;
+			let z = 40;
+            document.write("<p style='text-align:center'>Приклад знаходження найменше числа</p>");
+            document.write("x= "+x, " y= "+y, " z= "+z);
+
+			
+			
+			// Використання if-else для знаходження найбільшого числа
+			if (x < y && x < z) {
+				document.write("<br>Найменше серед трьох чисел - x= ", x);
+			} else if (y < z) {
+				document.write("<br>Найменше серед трьох чисел - y= ", y);
+			} else {
+				document.write("<br>Найменше серед трьох чисел - z= ", z);
+			}
+			
+			// Використання тернарної операції для знаходження найбільшого числа
+			let maxNumber = x < y ? (x < z ? x : z) : (y < z ? y : z);
+			document.write("<p>Значення найменшого серед трьох чисел  ", maxNumber);
+		</script>
+	</body>
+</html>
