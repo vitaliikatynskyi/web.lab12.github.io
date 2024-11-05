@@ -6,7 +6,7 @@
 	</head>	
 	<body>
 		<script> 
-			let lang = prompt("Введіть мову (ua, en, pl, de):");
+            let lang = prompt("Введіть мову (ua, en, pl, de):");
 
             if (lang === "ua") {
                 document.write("Мова: українська");
@@ -19,6 +19,9 @@
             } else {
                 document.write("Мову невизначено");
             }
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 2000);
 		</script>
 	</body>
 </html>

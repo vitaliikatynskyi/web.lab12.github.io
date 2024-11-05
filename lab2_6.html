@@ -1,35 +1,35 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Використання оператора IF</title>
-	</head>	
-	<body>
-		<script> "use strict";
-			let guess = Math.random() * 100; 
-			guess = Math.floor(guess); 
-			let f = true; 
-			let number; 
-			let count = 0;
-			let answer = confirm("Зіграємо?"); 
-			if (answer) {
-				while (f) {
-					number = parseInt(prompt("введіть число")); 
-					count++;
-					if (number == guess) {
-						alert("Ви вгадали\n кількість спроб: "+ count); 
-						f = false;
-					} 	
-						else 
-							if (number > guess) {
-								alert("Число менше, спробуйте ще раз");
-							} 	
-							else {
-								alert("Число більше, спробуйте ще раз");
-							}
+<head>
+	<meta charset="UTF-8">
+	<title>Використання оператора IF</title>
+</head>	
+<body>
+	<script> 
+		"use strict";
+		let guess = Math.random() * 100; 
+		guess = Math.floor(guess); 
+		let f = true; 
+		let number; 
+		let count = 0;
+		let answer = confirm("Зіграємо?"); 
+		
+		if (answer) {
+			while (f) {
+				number = parseInt(prompt("введіть число")); 
+				count++;
+				if (number == guess) {
+					alert("Ви вгадали\n кількість спроб: " + count); 
+					f = false;
+					break; // Exit the loop upon winning
+				} else if (number > guess) {
+					alert("Число менше, спробуйте ще раз");
+				} else {
+					alert("Число більше, спробуйте ще раз");
 				}
-			} 
-			else alert("Шкода.\nМоже бути в інший раз?");
-		</script>
-	</body>
+			}
+		}
+		<button onclick="quitGame()">Закінчити гру</button>
+	</script>
+</body>
 </html>
