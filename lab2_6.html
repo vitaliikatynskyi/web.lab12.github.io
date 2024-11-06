@@ -8,7 +8,7 @@
 	<script> 
 		"use strict";
 		let guess = Math.random() * 10; 
-		guess = Math.floor(guess); 
+		guess = Math.floor(guess) + 1; // Ensure guess is between 1 and 10
 		let f = true; 
 		let number; 
 		let count = 0;
@@ -17,6 +17,10 @@
 		if (answer) {
 			while (f) {
 				number = parseInt(prompt("введіть число від 1 до 10")); 
+				if (number < 1 || number > 10 || isNaN(number)) {
+					alert("Будь ласка, введіть число від 1 до 10");
+					continue;
+				}
 				count++;
 				if (number == guess) {
 					alert("Ви вгадали\n кількість спроб: " + count); 
