@@ -7,7 +7,7 @@
 <body>
 	<script> 
 		"use strict";
-		let guess = Math.random() * 100; 
+		let guess = Math.random() * 10; 
 		guess = Math.floor(guess); 
 		let f = true; 
 		let number; 
@@ -21,7 +21,7 @@
 				if (number == guess) {
 					alert("Ви вгадали\n кількість спроб: " + count); 
 					f = false;
-					break; // Exit the loop upon winning
+					break; 
 				} else if (number > guess) {
 					alert("Число менше, спробуйте ще раз");
 				} else {
@@ -29,7 +29,13 @@
 				}
 			}
 		}
-		<button onclick="quitGame()">Закінчити гру</button>
+	</script>
+	<button onclick="quitGame()">Закінчити гру</button>
+	<script>
+		function quitGame() {
+			alert("Гру завершено");
+			window.location.reload();
+		}
 	</script>
 </body>
 </html>
